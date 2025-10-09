@@ -1,0 +1,26 @@
+import { createListings } from './items.js';
+import { createNutritionalFilters } from './filter.js';
+
+// Fetch McDonald's menu data and create listings
+fetch('https://mc-donalds-api-jessev-17-jesse-vieiras-projects.vercel.app/mcds')
+  .then(response => response.json())
+  .then(menuItems => {
+    console.log('McDonald\'s Menu Items:', menuItems);
+    console.log('Total items:', menuItems.length);
+    
+    // Log categories for debugging
+    const categories = [...new Set(menuItems.map(item => item.CATEGORY))];
+    console.log('Available categories:', categories);
+    
+    // Create category listings
+    createListings(menuItems);
+    
+    // Create nutritional filters
+    createNutritionalFilters(menuItems);
+  })
+  .catch(error => {
+    console.error('Error fetching menu data:', error);
+    document.querySelector('main').innerHTML = '<p>Error loading menu data. Please try again later.</p>';
+  });
+
+  
