@@ -7,6 +7,28 @@ html, body {
   background-color: #f8f9fa;
 }
 
+.switch-site-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.75rem 1.5rem;
+  background: #ffbc0d;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.switch-site-btn:hover {
+  background: #e5a900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 header {
   padding: 2rem;
   text-align: center;
