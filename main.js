@@ -3,7 +3,7 @@ import { createNutritionalFilters } from './filter.js';
 
 // Fetch McDonald's menu data and create listings
 // Connected to your MongoDB database via Vercel backend
-fetch('https://menu-apmcxgm35-jesse-vieiras-projects.vercel.app/data')
+fetch('https://menu-ke1ptsw0p-jesse-vieiras-projects.vercel.app/data')
   .then(response => response.json())
   .then(menuItems => {
     console.log('McDonald\'s Menu Items:', menuItems);
